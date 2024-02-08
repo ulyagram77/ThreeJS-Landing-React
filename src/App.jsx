@@ -1,9 +1,9 @@
-function App() {
+const App = () => {
     return (
         <>
             <div>gg</div>
         </>
     );
-}
+};
 
 export default App;
