@@ -27,18 +27,22 @@ const Contact = withSectionWrapper(() => {
 
         setLoading(true);
 
+        const public_key = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+        const template_id = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+        const service_id = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+
         emailjs
             .send(
-                'service_q9dkt5r',
-                'template_x8vam2q',
+                service_id,
+                template_id,
                 {
                     from_name: form.name,
-                    to_name: 'Kyrylo',
+                    to_name: 'Kyrylo Ulianov',
                     from_email: form.email,
                     to_email: 'ulyak.work@gmail.com',
                     message: form.message,
                 },
-                'hXWAYZ3n629K_UaQV',
+                public_key,
             )
             .then(
                 () => {
