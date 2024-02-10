@@ -217,6 +217,7 @@ const projects = [
         ],
         image: carrent,
         source_code_link: 'https://github.com/',
+        demo_link: 'https://ulyagram77.github.io/',
     },
     {
         name: 'Job IT',
@@ -238,6 +239,7 @@ const projects = [
         ],
         image: jobit,
         source_code_link: 'https://github.com/',
+        demo_link: 'https://ulyagram77.github.io/',
     },
     {
         name: 'Trip Guide',
@@ -259,6 +261,7 @@ const projects = [
         ],
         image: tripguide,
         source_code_link: 'https://github.com/',
+        demo_link: 'https://ulyagram77.github.io/',
     },
 ];
 
