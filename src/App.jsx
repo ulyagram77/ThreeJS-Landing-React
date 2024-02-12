@@ -3,7 +3,6 @@ import {
     About,
     Contact,
     Experience,
-    Feedbacks,
     Hero,
     Navbar,
     Tech,
@@ -30,7 +29,6 @@ const App = () => {
                     <Tech />
                 </ErrorBoundary>
                 <Works />
-                <Feedbacks />
 
                 <div className="relative z-0">
                     <ErrorBoundary>
