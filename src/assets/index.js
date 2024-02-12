@@ -27,9 +27,13 @@ import shopify from './company/shopify.png';
 import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 
-import carrent from './carrent.png';
-import jobit from './jobit.png';
-import tripguide from './tripguide.png';
+import marvel from './projects/marvel.png';
+import table from './projects/table.png';
+import sneaks from './projects/sneaks.png';
+import xopen from './projects/xopen.png';
+import pulse from './projects/pulse.png';
+
+import error from './error.gif';
 
 export {
     logo,
@@ -58,7 +62,10 @@ export {
     shopify,
     starbucks,
     tesla,
-    carrent,
-    jobit,
-    tripguide,
+    marvel,
+    table,
+    sneaks,
+    xopen,
+    pulse,
+    error,
 };
