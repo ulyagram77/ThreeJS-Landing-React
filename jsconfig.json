@@ -8,6 +8,7 @@
             "assets/*": ["assets/*"],
             "constants/*": ["constants/*"],
             "utils/*": ["utils/*"],
+            "hooks/*": ["hooks/*"],
             "styles/*": ["styles/*"]
         }
     }
