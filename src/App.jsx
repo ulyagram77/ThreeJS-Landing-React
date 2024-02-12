@@ -11,26 +11,36 @@ import {
     StarsCanvas,
 } from 'components/sections';
 
+import { ErrorBoundary } from './components/waiters';
+
 const App = () => {
     return (
         <BrowserRouter>
-            <div className="relative z-0 bg-primary">
+            <main className="relative z-0 bg-primary">
                 <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                     <Navbar />
-                    <Hero />
+                    <ErrorBoundary>
+                        <Hero />
+                    </ErrorBoundary>
                 </div>
 
                 <About />
                 <Experience />
-                <Tech />
+                <ErrorBoundary>
+                    <Tech />
+                </ErrorBoundary>
                 <Works />
                 <Feedbacks />
 
                 <div className="relative z-0">
-                    <Contact />
-                    <StarsCanvas />
+                    <ErrorBoundary>
+                        <Contact />
+                    </ErrorBoundary>
+                    <ErrorBoundary>
+                        <StarsCanvas />
+                    </ErrorBoundary>
                 </div>
-            </div>
+            </main>
         </BrowserRouter>
     );
 };

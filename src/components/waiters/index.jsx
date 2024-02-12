@@ -1,2 +1,5 @@
 import CanvasLoader from './CanvasLoader';
-export { CanvasLoader };
+import ErrorBoundary from './ErrorBoundary';
+import ErrorMessage from './ErrorMessage';
+
+export { CanvasLoader, ErrorBoundary, ErrorMessage };
