@@ -4,24 +4,21 @@ import {
     creator,
     web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
     redux,
     tailwind,
-    nodejs,
-    mongodb,
     git,
     figma,
-    docker,
     meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    marvel,
+    sneaks,
+    table,
+    xopen,
     threejs,
 } from '../assets';
 
@@ -72,10 +69,7 @@ const technologies = [
         name: 'JavaScript',
         icon: javascript,
     },
-    {
-        name: 'TypeScript',
-        icon: typescript,
-    },
+
     {
         name: 'React JS',
         icon: reactjs,
@@ -88,14 +82,7 @@ const technologies = [
         name: 'Tailwind CSS',
         icon: tailwind,
     },
-    {
-        name: 'Node JS',
-        icon: nodejs,
-    },
-    {
-        name: 'MongoDB',
-        icon: mongodb,
-    },
+
     {
         name: 'Three JS',
         icon: threejs,
@@ -107,10 +94,6 @@ const technologies = [
     {
         name: 'figma',
         icon: figma,
-    },
-    {
-        name: 'docker',
-        icon: docker,
     },
 ];
 
@@ -198,31 +181,9 @@ const testimonials = [
 
 const projects = [
     {
-        name: 'Car Rent',
+        name: 'Marvel Portal',
         description:
-            'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-        tags: [
-            {
-                name: 'react',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'mongodb',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'tailwind',
-                color: 'pink-text-gradient',
-            },
-        ],
-        image: carrent,
-        source_code_link: 'https://github.com/',
-        demo_link: 'https://ulyagram77.github.io/',
-    },
-    {
-        name: 'Job IT',
-        description:
-            'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+            'Web-Application that allows users to get information about the characters of the marvel universe and the comics in which they participated. ',
         tags: [
             {
                 name: 'react',
@@ -232,36 +193,72 @@ const projects = [
                 name: 'restapi',
                 color: 'green-text-gradient',
             },
+        ],
+        image: marvel,
+        source_code_link: 'https://github.com/ulyagram77/Marvel-Portal-React',
+        demo_link: 'https://marvel-portal-react-ten.vercel.app/',
+    },
+    {
+        name: 'Workers Table',
+        description:
+            'Simple CRUD Web-Application  for managing company employees salaries and to keep track of the total number of employees for fast workflow organization. ',
+        tags: [
+            {
+                name: 'react',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'CRUD',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'bootstrap',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: table,
+        source_code_link: 'https://github.com/ulyagram77/Workers-Table-React',
+        demo_link: 'https://workers-table-react.vercel.app/',
+    },
+    {
+        name: 'Sneaks Store',
+        description:
+            'Amazing landing page with many intaractive elements such as sliders, accordeons, gallery wich can provide pleasant experience while searching for your pair.',
+        tags: [
+            {
+                name: 'vanilla-js',
+                color: 'yellow-text-gradient',
+            },
+            {
+                name: 'AJAX',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'swiper',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: sneaks,
+        source_code_link: 'https://github.com/ulyagram77/Sneaks_Landing',
+        demo_link: 'https://ulyagram77.github.io/Sneaks_Landing/',
+    },
+    {
+        name: 'X-OPEN',
+        description:
+            'Simple landing page with css-transitions, hovers and animations. It takes minimal script and many css. It was one of the first own projects.',
+        tags: [
+            {
+                name: 'vanilla-js',
+                color: 'yellow-text-gradient',
+            },
             {
                 name: 'scss',
                 color: 'pink-text-gradient',
             },
         ],
-        image: jobit,
-        source_code_link: 'https://github.com/',
-        demo_link: 'https://ulyagram77.github.io/',
-    },
-    {
-        name: 'Trip Guide',
-        description:
-            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-        tags: [
-            {
-                name: 'nextjs',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'supabase',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'css',
-                color: 'pink-text-gradient',
-            },
-        ],
-        image: tripguide,
-        source_code_link: 'https://github.com/',
-        demo_link: 'https://ulyagram77.github.io/',
+        image: xopen,
+        source_code_link: 'https://github.com/ulyagram77/X-OPEN_Landing',
+        demo_link: 'https://ulyagram77.github.io/X-OPEN_Landing/',
     },
 ];
 
