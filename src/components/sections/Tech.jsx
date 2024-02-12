@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+import { useMathcMedia } from 'src/hooks';
 import { BallCanvas } from '../canvas';
 import { withSectionWrapper } from 'src/hoc';
 import { technologies } from 'src/constants';
@@ -7,6 +8,8 @@ import { textVariant, fadeIn } from 'src/utils/motion';
 import { styles } from 'src/styles/styles';
 
 const Tech = withSectionWrapper(() => {
+    const { isDesktop } = useMathcMedia();
+
     return (
         <>
             <motion.div
@@ -23,7 +26,15 @@ const Tech = withSectionWrapper(() => {
             >
                 {technologies.map(technology => (
                     <div className="w-28 h-28" key={technology.name}>
-                        <BallCanvas icon={technology.icon} />
+                        {!isDesktop ? (
+                            <img
+                                src={technology.icon}
+                                alt="tech"
+                                className="bg-tertiary p-5 rounded-2xl border-b-2 border-white"
+                            />
+                        ) : (
+                            <BallCanvas icon={technology.icon} />
+                        )}
                     </div>
                 ))}
             </motion.div>
