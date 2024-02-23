@@ -75,7 +75,7 @@ const Works = withSectionWrapper(() => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>My works</p>
+                <p className={styles.sectionSubText}>My own works</p>
                 <h2 className={styles.sectionHeadText}>Projects.</h2>
             </motion.div>
 
@@ -84,14 +84,18 @@ const Works = withSectionWrapper(() => {
                     variants={fadeIn('', '', 0.1, 1)}
                     className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
                 >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Repellendus, alias! Voluptate quasi dolore magni molestiae nam
-                    deleniti et, ducimus doloribus reprehenderit consequatur voluptas
-                    accusantium pariatur at, in error natus iure. Placeat illo
-                    commodi voluptatum ad a quo quibusdam, necessitatibus saepe quae
-                    maiores fugiat dolores animi vel quas natus accusamus quia soluta
-                    delectus facere quaerat eum similique maxime nobis. Quis,
-                    consequuntur.
+                    Below you can watch some of my works. Following projects
+                    showcases my skills and experience through real examples of my
+                    work.
+                    <br />
+                    <br />
+                    Each project contains <b>demo link</b>, <b>source-code link</b>{' '}
+                    and <b>brief description</b> with the technical stack used in it.
+                    <br />
+                    <br />
+                    These projects reflect my ability to work with different
+                    situations and technologies, as well as my ability to organize
+                    the project beautifully for others to see.
                 </motion.p>
             </div>
 

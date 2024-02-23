@@ -1,7 +1,5 @@
 import {
     mobile,
-    backend,
-    creator,
     web,
     javascript,
     html,
@@ -11,15 +9,20 @@ import {
     tailwind,
     git,
     figma,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
     marvel,
     sneaks,
     table,
     xopen,
     threejs,
+    step,
+    udemy,
+    khpi,
+    sigma,
+    skiftech,
+    sniffCertificate,
+    telegramContacts,
+    githubContacts,
+    instagramContacts,
 } from '../assets';
 
 export const navLinks = [
@@ -43,16 +46,8 @@ const services = [
         icon: web,
     },
     {
-        title: 'React Native Developer',
+        title: 'Frontend Developer',
         icon: mobile,
-    },
-    {
-        title: 'Backend Developer',
-        icon: backend,
-    },
-    {
-        title: 'Content Creator',
-        icon: creator,
     },
 ];
 
@@ -99,56 +94,76 @@ const technologies = [
 
 const experiences = [
     {
-        title: 'React.js Developer',
-        company_name: 'Starbucks',
-        icon: starbucks,
-        iconBg: '#383E56',
-        date: 'March 2020 - April 2021',
-        points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
-        ],
-    },
-    {
-        title: 'React Native Developer',
-        company_name: 'Tesla',
-        icon: tesla,
+        title: 'First IT experience',
+        company_name: 'Junior academy STEP',
+        icon: step,
         iconBg: '#E6DEDD',
-        date: 'Jan 2021 - Feb 2022',
+        date: 'Year 2017 - 2019',
         points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
+            'Introduction to concepts of design composition, web-design, graphic design, motion-design.',
+            'Introduction to programming and programming languages (C++, JavaScript, VBA).',
+            'Introduction to basics of 3D-modelling.',
+            'Introduction to computer hardware, robotics.',
         ],
     },
     {
-        title: 'Web Developer',
-        company_name: 'Shopify',
-        icon: shopify,
-        iconBg: '#383E56',
-        date: 'Jan 2022 - Jan 2023',
-        points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
-        ],
-    },
-    {
-        title: 'Full stack Developer',
-        company_name: 'Meta',
-        icon: meta,
+        title: 'Additional IT courses',
+        company_name: 'Udemy platform',
+        icon: udemy,
         iconBg: '#E6DEDD',
-        date: 'Jan 2023 - Present',
+        date: 'Year 2021 - 2023',
         points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
+            'Complete course on JavaScript + React by Ivan Petrichenko.',
+            'Web-developer course by Ivan Petrichenko.',
+            'Practical JavaScript course by Ivan Petrichenko.',
+            'UI/UX Designer in figma several courses.',
         ],
+    },
+    {
+        title: "Computer science | Bachelor's degree",
+        company_name:
+            'National Technical University "Kharkiv Polytechnical Institute"',
+        icon: khpi,
+        iconBg: '#9f1c20',
+        date: 'Oct 2020 - Present',
+        points: [
+            'Learning concepts of composition and graphic design.',
+            'Learning fundamentals of discrete mathematics, math analysis, linear algebra, and others.',
+            'Learning fundamentals of programming, also programming with: C++, C#, Python, JavaScript, Kotlin/Java.',
+            'Learning basics of technical vision and data science using Python.',
+        ],
+    },
+    {
+        title: 'Frontend Developer | PET-project SNIFF',
+        company_name: 'Sigma Software',
+        icon: sigma,
+        iconBg: '#E6DEDD',
+        date: 'Mar 2023 - Jun 2023',
+        points: [
+            'Developing web-application using React.js and other related technologies.',
+            'Collaborating with cross-functional teams including designer, other developers to create high-quality product.',
+            'Implementing responsive design and ensuring cross-browser compatibility, work with service API.',
+            'Participating in code reviews and providing constructive feedback to other developers.',
+            'Team work on "SCRUM" methodology using JIRA, also implementing different team development methods.',
+        ],
+        github: 'https://github.com/Sniff-project',
+        certificate: sniffCertificate,
+    },
+    {
+        title: 'Frontend Developer | PET-project Optiflow',
+        company_name: 'Skiftech',
+        icon: skiftech,
+        iconBg: 'black',
+        date: 'Sep 2023 - Present',
+        points: [
+            'Developing web-application using React.js and Three.js as a main stack.',
+            'Collaborating with cross-functional teams including designer, other developers to create high-quality product.',
+            'Working with backend API and authorization logic.',
+            'Participating in code reviews and providing constructive feedback to other developers.',
+            'Using team development tools to work productively on tasks.',
+            'Working on the UI/UX design of the service.',
+        ],
+        github: 'https://github.com/Skiftech-project',
     },
 ];
 
@@ -262,4 +277,6 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const contacts = [githubContacts, telegramContacts, instagramContacts];
+
+export { services, technologies, experiences, testimonials, projects, contacts };

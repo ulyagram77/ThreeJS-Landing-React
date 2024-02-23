@@ -49,6 +49,23 @@ const ExperienceCard = ({ experience }) => {
                         </li>
                     ))}
                 </ul>
+                {experience.github ? (
+                    <p
+                        className="underline text-sm hover:text-blue-500 cursor-pointer transition-color ease-in-out duration-300"
+                        onClick={() => window.open(experience.github, '_blank')}
+                    >
+                        Github of the project
+                    </p>
+                ) : null}
+
+                {experience.certificate ? (
+                    <p
+                        className="underline text-sm hover:text-blue-500 cursor-pointer transition-color ease-in-out duration-300"
+                        onClick={() => window.open(experience.certificate, '_blank')}
+                    >
+                        Received certificate
+                    </p>
+                ) : null}
             </div>
         </VerticalTimelineElement>
     );
@@ -58,7 +75,7 @@ const Experience = withSectionWrapper(() => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>What I have done so far</p>
+                <p className={styles.sectionSubText}>my winding road to success</p>
                 <h2 className={styles.sectionHeadText}>Work Experience.</h2>
             </motion.div>
 

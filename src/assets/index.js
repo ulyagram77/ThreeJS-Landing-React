@@ -9,29 +9,32 @@ import menu from './menu.svg';
 import close from './close.svg';
 
 import css from './tech/css.png';
-import docker from './tech/docker.png';
 import figma from './tech/figma.png';
 import git from './tech/git.png';
 import html from './tech/html.png';
 import javascript from './tech/javascript.png';
-import mongodb from './tech/mongodb.png';
-import nodejs from './tech/nodejs.png';
 import reactjs from './tech/reactjs.png';
 import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
-import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 
-import meta from './company/meta.png';
-import shopify from './company/shopify.png';
-import starbucks from './company/starbucks.png';
-import tesla from './company/tesla.png';
+import step from './company/step.png';
+import udemy from './company/udemy.png';
+import khpi from './company/khpi.png';
+import sigma from './company/sigma.png';
+import skiftech from './company/skiftech.png';
 
 import marvel from './projects/marvel.png';
 import table from './projects/table.png';
 import sneaks from './projects/sneaks.png';
 import xopen from './projects/xopen.png';
 import pulse from './projects/pulse.png';
+
+import sniffCertificate from './certificates/sniff.pdf';
+
+import githubContacts from './social/github.svg';
+import telegramContacts from './social/telegram.svg';
+import instagramContacts from './social/instagram.svg';
 
 import error from './error.gif';
 
@@ -46,26 +49,27 @@ export {
     menu,
     close,
     css,
-    docker,
     figma,
     git,
     html,
     javascript,
-    mongodb,
-    nodejs,
     reactjs,
     redux,
     tailwind,
-    typescript,
     threejs,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
     marvel,
     table,
     sneaks,
     xopen,
     pulse,
     error,
+    step,
+    udemy,
+    khpi,
+    sigma,
+    sniffCertificate,
+    skiftech,
+    githubContacts,
+    instagramContacts,
+    telegramContacts,
 };
