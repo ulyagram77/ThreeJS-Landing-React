@@ -1,11 +1,13 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback, lazy } from 'react';
+
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 import { styles } from 'src/styles/styles';
-import { EarthCanvas } from '../canvas';
 import { withSectionWrapper } from 'src/hoc';
 import { slideIn } from 'src/utils/motion';
+
+const EarthCanvas = lazy(() => import('../canvas/Earth'));
 
 const Contact = withSectionWrapper(() => {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -17,46 +19,49 @@ const Contact = withSectionWrapper(() => {
         setForm({ ...form, [name]: value });
     };
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    const handleSubmit = useCallback(
+        e => {
+            e.preventDefault();
 
-        if (!form.name || !form.email || !form.message) {
-            alert('Please fill in all fields!');
-            return;
-        }
+            if (!form.name || !form.email || !form.message) {
+                alert('Please fill in all fields!');
+                return;
+            }
 
-        setLoading(true);
+            setLoading(true);
 
-        const public_key = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
-        const template_id = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
-        const service_id = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+            const public_key = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+            const template_id = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+            const service_id = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
 
-        emailjs
-            .send(
-                service_id,
-                template_id,
-                {
-                    from_name: form.name,
-                    to_name: 'Kyrylo Ulianov',
-                    from_email: form.email,
-                    to_email: 'ulyak.work@gmail.com',
-                    message: form.message,
-                },
-                public_key,
-            )
-            .then(
-                () => {
-                    setLoading(false);
-                    alert('Thank u so much)');
-                    setForm({ name: '', email: '', message: '' });
-                },
-                error => {
-                    setLoading(false);
-                    console.log(error);
-                    alert('Something went wrong!');
-                },
-            );
-    };
+            emailjs
+                .send(
+                    service_id,
+                    template_id,
+                    {
+                        from_name: form.name,
+                        to_name: 'Kyrylo Ulianov',
+                        from_email: form.email,
+                        to_email: 'ulyak.work@gmail.com',
+                        message: form.message,
+                    },
+                    public_key,
+                )
+                .then(
+                    () => {
+                        setLoading(false);
+                        alert('Thank u so much)');
+                        setForm({ name: '', email: '', message: '' });
+                    },
+                    error => {
+                        setLoading(false);
+                        console.log(error);
+                        alert('Something went wrong!');
+                    },
+                );
+        },
+        [form.name, form.email, form.message],
+    );
 
     return (
         <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">

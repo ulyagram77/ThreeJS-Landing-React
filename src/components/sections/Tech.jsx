@@ -1,11 +1,13 @@
+import { lazy } from 'react';
 import { motion } from 'framer-motion';
 
 import { useMathcMedia } from 'src/hooks';
-import { BallCanvas } from '../canvas';
 import { withSectionWrapper } from 'src/hoc';
 import { technologies } from 'src/constants';
 import { textVariant, fadeIn } from 'src/utils/motion';
 import { styles } from 'src/styles/styles';
+
+const BallCanvas = lazy(() => import('../canvas/Ball'));
 
 const Tech = withSectionWrapper(() => {
     const { isDesktop } = useMathcMedia();
