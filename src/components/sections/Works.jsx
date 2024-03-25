@@ -1,18 +1,15 @@
-import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import { styles } from 'src/styles/styles';
 import { github, demo } from 'src/assets';
 import { withSectionWrapper } from 'src/hoc';
 import { projects } from 'src/constants';
-import { fadeIn, textVariant } from 'src/utils/motion';
 
 const ProjectCard = props => {
-    const { index, name, description, tags, image, source_code_link, demo_link } =
-        props;
+    const { name, description, tags, image, source_code_link, demo_link } = props;
 
     return (
-        <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+        <div>
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
                 <div className="relative w-full h-[230px]">
                     <img
@@ -59,23 +56,20 @@ const ProjectCard = props => {
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
 const Works = withSectionWrapper(() => {
     return (
         <>
-            <motion.div variants={textVariant()}>
+            <div>
                 <p className={styles.sectionSubText}>My own works</p>
                 <h2 className={styles.sectionHeadText}>Projects.</h2>
-            </motion.div>
+            </div>
 
             <div className="w-full flex">
-                <motion.p
-                    variants={fadeIn('', '', 0.1, 1)}
-                    className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-                >
+                <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
                     Below you can watch some of my works. Following projects
                     showcases my skills and experience through real examples of my
                     work.
@@ -88,7 +82,7 @@ const Works = withSectionWrapper(() => {
                     These projects reflect my ability to work with different
                     situations and technologies, as well as my ability to organize
                     the project beautifully for others to see.
-                </motion.p>
+                </p>
             </div>
 
             <div className="mt-20 flex flex-wrap gap-7">
