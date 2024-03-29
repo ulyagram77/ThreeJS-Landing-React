@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { styles } from 'src/styles/styles';
 import { github, demo } from 'src/assets';
@@ -100,19 +101,19 @@ const Works = withSectionWrapper(() => {
     );
 }, 'works');
 
-ProjectCard.propTypes = {
-    index: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            color: PropTypes.string.isRequired,
-        }),
-    ).isRequired,
-    image: PropTypes.string.isRequired,
-    source_code_link: PropTypes.string.isRequired,
-    demo_link: PropTypes.string,
-};
+// ProjectCard.propTypes = {
+//     index: PropTypes.number.isRequired,
+//     name: PropTypes.string.isRequired,
+//     description: PropTypes.string.isRequired,
+//     tags: PropTypes.arrayOf(
+//         PropTypes.shape({
+//             name: PropTypes.string.isRequired,
+//             color: PropTypes.string.isRequired,
+//         }),
+//     ).isRequired,
+//     image: PropTypes.string.isRequired,
+//     source_code_link: PropTypes.string.isRequired,
+//     demo_link: PropTypes.string,
+// };
 
 export default Works;
