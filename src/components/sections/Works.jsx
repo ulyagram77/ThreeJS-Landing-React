@@ -1,15 +1,18 @@
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import { styles } from 'src/styles/styles';
 import { github, demo } from 'src/assets';
 import { withSectionWrapper } from 'src/hoc';
 import { projects } from 'src/constants';
+import { fadeIn, textVariant } from 'src/utils/motion';
 
 const ProjectCard = props => {
-    const { name, description, tags, image, source_code_link, demo_link } = props;
+    const { index, name, description, tags, image, source_code_link, demo_link } =
+        props;
 
     return (
-        <div>
+        <motion.div variants={fadeIn('up', 'spring', 0.5 * index, 0.75)}>
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
                 <div className="relative w-full h-[230px]">
                     <img
@@ -56,19 +59,19 @@ const ProjectCard = props => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
 const Works = withSectionWrapper(() => {
     return (
         <>
-            <div>
-                <p className={styles.sectionSubText}>My own works</p>
+            <motion.div variants={textVariant()}>
+                <p className={styles.sectionSubText}>showcase of my skills</p>
                 <h2 className={styles.sectionHeadText}>Projects.</h2>
-            </div>
+            </motion.div>
 
-            <div className="w-full flex">
+            <motion.div variants={fadeIn('', '', 0.1, 1)} className="w-full flex">
                 <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
                     Below you can watch some of my works. Following projects
                     showcases my skills and experience through real examples of my
@@ -83,7 +86,7 @@ const Works = withSectionWrapper(() => {
                     situations and technologies, as well as my ability to organize
                     the project beautifully for others to see.
                 </p>
-            </div>
+            </motion.div>
 
             <div className="mt-20 flex flex-wrap gap-7">
                 {projects.map((project, index) => (
