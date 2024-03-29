@@ -1,11 +1,19 @@
 import { lazy } from 'react';
 
 import { motion } from 'framer-motion';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
+
 import { styles } from 'src/styles/styles';
 
 const ComputersCanvas = lazy(() => import('../canvas/Computers'));
 
 const Hero = () => {
+    const [text] = useTypewriter({
+        words: ['Kyrylo', 'Ulianov'],
+        loop: 0,
+        typeSpeed: 140,
+    });
+
     return (
         <section className="relative w-full h-screen mx-auto">
             <div
@@ -16,8 +24,11 @@ const Hero = () => {
                     <div className="w-1 sm:h-80 h-40 violet-gradient" />
                 </div>
                 <div>
-                    <h1 className={`${styles.heroHeadText} text-white`}>
-                        Hi, I&apos;m <span className="text-[#915eff]">Kyrylo</span>
+                    <h1
+                        className={`${styles.heroHeadText} text-white animated-text`}
+                    >
+                        Hi, I&apos;m <span className="text-[#915eff]">{text}</span>
+                        <Cursor cursorColor="#915eff" />
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                         I am a web-developer from
