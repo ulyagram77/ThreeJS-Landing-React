@@ -8,11 +8,10 @@ import { projects } from 'src/constants';
 import { fadeIn, textVariant } from 'src/utils/motion';
 
 const ProjectCard = props => {
-    const { index, name, description, tags, image, source_code_link, demo_link } =
-        props;
+    const { name, description, tags, image, source_code_link, demo_link } = props;
 
     return (
-        <motion.div variants={fadeIn('up', 'spring', 0.5 * index, 0.75)}>
+        <div>
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
                 <div className="relative w-full h-[230px]">
                     <img
@@ -59,7 +58,7 @@ const ProjectCard = props => {
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
