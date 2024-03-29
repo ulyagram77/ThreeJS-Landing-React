@@ -12,6 +12,7 @@ const Hero = () => {
         words: ['Kyrylo', 'Ulianov'],
         loop: 0,
         typeSpeed: 140,
+        delaySpeed: 3000,
     });
 
     return (
