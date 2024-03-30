@@ -14,6 +14,11 @@
     color-scheme: dark;
 }
 
+#root {
+    position: relative;
+    height: 100vh;
+}
+
 .hash-span {
     margin-top: -100px;
     padding-bottom: 100px;
@@ -35,6 +40,10 @@
     animation: mulShdSpin 1.1s infinite ease;
     transform: translateZ(0);
 }
+
+/* preloader styles */
+
+/* animations */
 
 @keyframes mulShdSpin {
     0%,
