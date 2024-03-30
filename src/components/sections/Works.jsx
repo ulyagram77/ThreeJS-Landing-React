@@ -1,46 +1,45 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 
-import { Tilt } from 'react-tilt';
 import { styles } from 'src/styles/styles';
-import { github } from 'src/assets';
+import { github, demo } from 'src/assets';
 import { withSectionWrapper } from 'src/hoc';
 import { projects } from 'src/constants';
 import { fadeIn, textVariant } from 'src/utils/motion';
 
-const ProjectCard = ({
-    index,
-    name,
-    description,
-    tags,
-    image,
-    source_code_link,
-}) => {
+const ProjectCard = props => {
+    const { index, name, description, tags, image, source_code_link, demo_link } =
+        props;
+
     return (
-        <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-            <Tilt
-                options={{
-                    max: 45,
-                    scale: 1,
-                    speed: 450,
-                }}
-                className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-            >
+        <motion.div variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}>
+            <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
                 <div className="relative w-full h-[230px]">
                     <img
                         src={image}
-                        alt="project_image"
+                        alt={name}
                         className="w-full h-full object-cover rounded-2xl"
                     />
 
-                    <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                    <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-2">
+                        <div
+                            onClick={() => window.open(demo_link, '_blank')}
+                            className="green-pink-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                        >
+                            <img
+                                src={demo}
+                                alt="demo"
+                                className="w-1/2 h-1/2 object-contain"
+                            />
+                        </div>
+
                         <div
                             onClick={() => window.open(source_code_link, '_blank')}
                             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
                         >
                             <img
                                 src={github}
-                                alt="source code"
+                                alt="github"
                                 className="w-1/2 h-1/2 object-contain"
                             />
                         </div>
@@ -54,15 +53,12 @@ const ProjectCard = ({
 
                 <div className="mt-4 flex flex-wrap gap-2">
                     {tags.map(tag => (
-                        <p
-                            key={`${name}-${tag.name}`}
-                            className={`text-[14px] ${tag.color}`}
-                        >
-                            #{tag.name}
-                        </p>
+                        <div key={tag.name} className="bg-primary rounded-2xl px-3">
+                            <p className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
+                        </div>
                     ))}
                 </div>
-            </Tilt>
+            </div>
         </motion.div>
     );
 };
@@ -71,7 +67,7 @@ const Works = withSectionWrapper(() => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={`${styles.sectionSubText} `}>My work</p>
+                <p className={`${styles.sectionSubText} `}>showcase of my skills</p>
                 <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
             </motion.div>
 
@@ -80,11 +76,18 @@ const Works = withSectionWrapper(() => {
                     variants={fadeIn('', '', 0.1, 1)}
                     className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
                 >
-                    Following projects showcases my skills and experience through
-                    real-world examples of my work. Each project is briefly described
-                    with links to code repositories and live demos in it. It reflects
-                    my ability to solve complex problems, work with different
-                    technologies, and manage projects effectively.
+                    Below you can watch some of my works. Following projects
+                    showcases my skills and experience through real examples of my
+                    work.
+                    <br />
+                    <br />
+                    Each project contains <b>demo link</b>, <b>source-code link</b>{' '}
+                    and <b>brief description</b> with the technical stack used in it.
+                    <br />
+                    <br />
+                    These projects reflect my ability to work with different
+                    situations and technologies, as well as my ability to organize
+                    the project beautifully for others to see.
                 </motion.p>
             </div>
 
