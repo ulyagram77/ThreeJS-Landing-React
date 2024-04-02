@@ -75,7 +75,7 @@ const Works = withSectionWrapper(() => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={`${styles.sectionSubText} `}>My work</p>
+                <p className={`${styles.sectionSubText} `}>showcase of my skills</p>
                 <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
             </motion.div>
 
