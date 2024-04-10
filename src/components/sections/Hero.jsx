@@ -2,14 +2,16 @@ import { lazy } from 'react';
 
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTranslation } from 'react-i18next';
 
 import { styles } from 'src/styles/styles';
 
 const ComputersCanvas = lazy(() => import('../canvas/Computers'));
 
 const Hero = () => {
+    const { t } = useTranslation();
     const [text] = useTypewriter({
-        words: ['Kyrylo', 'Ulianov'],
+        words: [t('hero.name'), t('hero.surname')],
         loop: 0,
         typeSpeed: 140,
         delaySpeed: 3000,
@@ -28,12 +30,13 @@ const Hero = () => {
                     <h1
                         className={`${styles.heroHeadText} text-white animated-text`}
                     >
-                        Hi, I&apos;m <span className="text-[#915eff]">{text}</span>
+                        {t('hero.title')}
+                        <span className="text-[#915eff]">{text}</span>
                         <Cursor cursorColor="#915eff" />
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                        I am a web-developer from
-                        <br className="sm:block hidden" /> Kharkiv, Ukraine.
+                        {t('hero.subtext')}
+                        <br className="sm:block hidden" /> {t('hero.location')}
                     </p>
                 </div>
             </div>

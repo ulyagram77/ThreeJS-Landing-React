@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import { useMathcMedia } from 'src/hooks';
 import { withSectionWrapper } from 'src/hoc';
@@ -11,6 +12,7 @@ const BallCanvas = lazy(() => import('../canvas/Ball'));
 
 const Tech = withSectionWrapper(() => {
     const { isDesktop } = useMathcMedia();
+    const { t } = useTranslation();
 
     return (
         <>
@@ -18,8 +20,8 @@ const Tech = withSectionWrapper(() => {
                 variants={textVariant()}
                 className="flex flex-col justify-center items-center mb-10"
             >
-                <p className={styles.sectionSubText}>Technology Stack</p>
-                <h2 className={styles.sectionHeadText}>Instruments</h2>
+                <p className={styles.sectionSubText}>{t('tech.subtitle')}</p>
+                <h2 className={styles.sectionHeadText}>{t('tech.title')}</h2>
             </motion.div>
 
             <motion.div

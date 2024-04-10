@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { styles } from 'styles/styles';
 import { navLinks } from 'src/constants';
 import { logo, menu, close } from 'src/assets';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,6 +27,10 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const changeLanguage = language => {
+        i18n.changeLanguage(language);
+    };
+
     return (
         <nav
             className={`${
@@ -33,10 +39,10 @@ const Navbar = () => {
                 scrolled ? 'bg-primary' : 'bg-transparent'
             }`}
         >
-            <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+            <div className="w-full flex items-center max-w-7xl mx-auto">
                 <Link
                     to="/"
-                    className="flex items-center gap-2"
+                    className="flex flex-1 items-center gap-2"
                     onClick={() => {
                         setActive('');
                         window.scrollTo(0, 0);
@@ -44,8 +50,11 @@ const Navbar = () => {
                 >
                     <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
                     <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-                        Kyrylo &nbsp;
-                        <span className="sm:block hidden"> | Web-Developer</span>
+                        {t('navbar.logo.name')} &nbsp;
+                        <span className="sm:block hidden">
+                            {' '}
+                            | {t('navbar.logo.profession')}
+                        </span>
                     </p>
                 </Link>
 
@@ -60,7 +69,7 @@ const Navbar = () => {
                             } hover:text-white text-[18px] font-medium cursor-pointer transition-color ease-in-out duration-300`}
                             onClick={() => setActive(nav.title)}
                         >
-                            <a href={`#${nav.id}`}>{nav.title}</a>
+                            <a href={`#${nav.id}`}>{t(nav.title)}</a>
                         </li>
                     ))}
                 </ul>
@@ -92,11 +101,17 @@ const Navbar = () => {
                                         setActive(nav.title);
                                     }}
                                 >
-                                    <a href={`#${nav.id}`}>{nav.title}</a>
+                                    <a href={`#${nav.id}`}>{t(nav.title)}</a>
                                 </li>
                             ))}
                         </ul>
                     </div>
+                </div>
+
+                <div className="ml-10 flex">
+                    <button onClick={() => changeLanguage('en')}>EN</button>
+                    <div>|</div>
+                    <button onClick={() => changeLanguage('ua')}>UA</button>
                 </div>
             </div>
         </nav>

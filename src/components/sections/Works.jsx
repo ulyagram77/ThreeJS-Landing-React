@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import { styles } from 'src/styles/styles';
 import { github, demo } from 'src/assets';
@@ -72,11 +73,13 @@ const ProjectCard = ({
 };
 
 const Works = withSectionWrapper(() => {
+    const { t } = useTranslation();
+
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={`${styles.sectionSubText} `}>showcase of my skills</p>
-                <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+                <p className={`${styles.sectionSubText} `}>{t('works.subtitle')}</p>
+                <h2 className={`${styles.sectionHeadText}`}>{t('works.title')}</h2>
             </motion.div>
 
             <div className="w-full flex">

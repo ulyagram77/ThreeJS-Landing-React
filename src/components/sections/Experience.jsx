@@ -3,6 +3,7 @@ import {
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 import { styles } from 'src/styles/styles';
@@ -72,11 +73,13 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = withSectionWrapper(() => {
+    const { t } = useTranslation();
+
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>my winding road to success</p>
-                <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+                <p className={styles.sectionSubText}>{t('experience.subtitle')}</p>
+                <h2 className={styles.sectionHeadText}>{t('experience.title')}</h2>
             </motion.div>
 
             <div className="mt-20 flex flex-col">

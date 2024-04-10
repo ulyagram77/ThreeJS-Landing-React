@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, lazy } from 'react';
 
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 import { styles } from 'src/styles/styles';
 import { withSectionWrapper } from 'src/hoc';
@@ -13,6 +14,7 @@ const Contact = withSectionWrapper(() => {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
     const [loading, setLoading] = useState(false);
     const formRef = useRef();
+    const { t } = useTranslation();
 
     const handleChange = e => {
         const { name, value } = e.target;
@@ -69,8 +71,8 @@ const Contact = withSectionWrapper(() => {
                 variants={slideIn('left', 'tween', 0.2, 1)}
                 className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
             >
-                <p className={styles.sectionSubText}>Get in touch</p>
-                <h3 className={styles.sectionHeadText}>Contact.</h3>
+                <p className={styles.sectionSubText}>{t('contact.subtitle')}</p>
+                <h3 className={styles.sectionHeadText}>{t('contact.title')}</h3>
 
                 <form
                     ref={formRef}
@@ -79,42 +81,42 @@ const Contact = withSectionWrapper(() => {
                 >
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">
-                            Your Name:
+                            {t('contact.form.fields.0.label')}
                         </span>
                         <input
                             type="text"
                             name="name"
                             value={form.name}
                             onChange={handleChange}
-                            placeholder="What`s your name?"
+                            placeholder={t('contact.form.fields.0.placeholder')}
                             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                         />
                     </label>
 
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">
-                            Your Email:
+                            {t('contact.form.fields.1.label')}
                         </span>
                         <input
                             type="email"
                             name="email"
                             value={form.email}
                             onChange={handleChange}
-                            placeholder="What`s your email?"
+                            placeholder={t('contact.form.fields.1.placeholder')}
                             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                         />
                     </label>
 
                     <label className="flex flex-col">
                         <span className="text-white font-medium mb-4">
-                            Your Message:
+                            {t('contact.form.fields.2.label')}
                         </span>
                         <textarea
                             name="message"
                             rows="7"
                             value={form.message}
                             onChange={handleChange}
-                            placeholder="What do you want to say?"
+                            placeholder={t('contact.form.fields.2.placeholder')}
                             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium resize-none"
                         />
                     </label>
@@ -124,7 +126,9 @@ const Contact = withSectionWrapper(() => {
                         className="btn bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
                         disabled={loading}
                     >
-                        {loading ? 'Sending...' : 'Send'}
+                        {loading
+                            ? t('contact.form.button.loading')
+                            : t('contact.form.button.text')}
                     </button>
                 </form>
             </motion.div>
