@@ -94,103 +94,74 @@ const technologies = [
 
 const experiences = [
     {
-        title: 'First IT experience',
-        company_name: 'Junior academy STEP',
+        title: 'experience.timeline.elements.0.title',
+        company_name: 'experience.timeline.elements.0.company_name',
         icon: step,
         iconBg: '#E6DEDD',
-        date: 'Year 2017 - 2019',
+        date: 'experience.timeline.elements.0.date',
         points: [
-            'Introduction to concepts of design composition, web-design, graphic design, motion-design.',
-            'Introduction to programming and programming languages (C++, JavaScript, VBA).',
-            'Introduction to basics of 3D-modelling.',
-            'Introduction to computer hardware, robotics.',
+            'experience.timeline.elements.0.points.0',
+            'experience.timeline.elements.0.points.1',
+            'experience.timeline.elements.0.points.2',
+            'experience.timeline.elements.0.points.3',
         ],
     },
     {
-        title: 'Additional IT courses',
-        company_name: 'Udemy platform',
+        title: 'experience.timeline.elements.1.title',
+        company_name: 'experience.timeline.elements.1.company_name',
         icon: udemy,
         iconBg: '#E6DEDD',
-        date: 'Year 2021 - 2023',
+        date: 'experience.timeline.elements.1.date',
         points: [
-            'Complete course on JavaScript + React by Ivan Petrichenko.',
-            'Web-developer course by Ivan Petrichenko.',
-            'Practical JavaScript course by Ivan Petrichenko.',
-            'UI/UX Designer in figma several courses.',
+            'experience.timeline.elements.1.points.0',
+            'experience.timeline.elements.1.points.1',
+            'experience.timeline.elements.1.points.2',
+            'experience.timeline.elements.1.points.3',
         ],
     },
     {
-        title: "Computer science | Bachelor's degree",
-        company_name:
-            'National Technical University "Kharkiv Polytechnical Institute"',
+        title: 'experience.timeline.elements.2.title',
+        company_name: 'experience.timeline.elements.2.company_name',
         icon: khpi,
         iconBg: '#9f1c20',
-        date: 'Oct 2020 - Present',
+        date: 'experience.timeline.elements.2.date',
         points: [
-            'Learning concepts of composition and graphic design.',
-            'Learning fundamentals of discrete mathematics, math analysis, linear algebra, and others.',
-            'Learning fundamentals of programming, also programming with: C++, C#, Python, JavaScript, Kotlin/Java.',
-            'Learning basics of technical vision and data science using Python.',
+            'experience.timeline.elements.2.points.0',
+            'experience.timeline.elements.2.points.1',
+            'experience.timeline.elements.2.points.2',
+            'experience.timeline.elements.2.points.3',
         ],
     },
     {
-        title: 'Frontend Developer | PET-project SNIFF',
-        company_name: 'Sigma Software',
+        title: 'experience.timeline.elements.3.title',
+        company_name: 'experience.timeline.elements.3.company_name',
         icon: sigma,
         iconBg: '#E6DEDD',
-        date: 'Mar 2023 - Jun 2023',
+        date: 'experience.timeline.elements.3.date',
         points: [
-            'Developing web-application using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designer, other developers to create high-quality product.',
-            'Implementing responsive design and ensuring cross-browser compatibility, work with service API.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
-            'Team work on "SCRUM" methodology using JIRA, also implementing different team development methods.',
+            'experience.timeline.elements.3.points.0',
+            'experience.timeline.elements.3.points.1',
+            'experience.timeline.elements.3.points.2',
+            'experience.timeline.elements.3.points.3',
+            'experience.timeline.elements.3.points.4',
         ],
         github: 'https://github.com/Sniff-project',
         certificate: sniffCertificate,
     },
     {
-        title: 'Frontend Developer | PET-project Optiflow',
-        company_name: 'Skiftech',
+        title: 'experience.timeline.elements.4.title',
+        company_name: 'experience.timeline.elements.4.company_name',
         icon: skiftech,
         iconBg: 'black',
-        date: 'Sep 2023 - Present',
+        date: 'experience.timeline.elements.4.date',
         points: [
-            'Developing web-application using React.js and Three.js as a main stack.',
-            'Collaborating with cross-functional teams including designer, other developers to create high-quality product.',
-            'Working with backend API and authorization logic.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
-            'Using team development tools to work productively on tasks.',
-            'Working on the UI/UX design of the service.',
+            'experience.timeline.elements.4.points.0',
+            'experience.timeline.elements.4.points.1',
+            'experience.timeline.elements.4.points.2',
+            'experience.timeline.elements.4.points.3',
+            'experience.timeline.elements.4.points.4',
         ],
         github: 'https://github.com/Skiftech-project',
-    },
-];
-
-const testimonials = [
-    {
-        testimonial:
-            'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-        name: 'Sara Lee',
-        designation: 'CFO',
-        company: 'Acme Co',
-        image: 'https://randomuser.me/api/portraits/women/4.jpg',
-    },
-    {
-        testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: 'Chris Brown',
-        designation: 'COO',
-        company: 'DEF Corp',
-        image: 'https://randomuser.me/api/portraits/men/5.jpg',
-    },
-    {
-        testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: 'Lisa Wang',
-        designation: 'CTO',
-        company: '456 Enterprises',
-        image: 'https://randomuser.me/api/portraits/women/6.jpg',
     },
 ];
 
@@ -279,4 +250,4 @@ const projects = [
 
 const contacts = [githubContacts, telegramContacts, instagramContacts];
 
-export { services, technologies, experiences, testimonials, projects, contacts };
+export { services, technologies, experiences, projects, contacts };
