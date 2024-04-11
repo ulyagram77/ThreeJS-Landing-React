@@ -43,7 +43,7 @@ const About = withSectionWrapper(() => {
 
     useEffect(() => {
         paragraphRef.current.innerHTML = t('about.text');
-    }, [i18n.language]);
+    }, [i18n.language, t]);
 
     return (
         <>
