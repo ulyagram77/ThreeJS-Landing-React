@@ -168,8 +168,7 @@ const experiences = [
 const projects = [
     {
         name: 'Marvel Portal',
-        description:
-            'Web-Application that allows users to get information about the characters of the marvel universe and the comics in which they participated. ',
+        description: 'works.projects.0.description',
         tags: [
             {
                 name: 'react',
@@ -186,8 +185,7 @@ const projects = [
     },
     {
         name: 'Workers Table',
-        description:
-            'Simple CRUD Web-Application  for managing company employees salaries and to keep track of the total number of employees for fast workflow organization. ',
+        description: 'works.projects.1.description',
         tags: [
             {
                 name: 'react',
@@ -208,8 +206,7 @@ const projects = [
     },
     {
         name: 'Sneaks Store',
-        description:
-            'Amazing landing page with many intaractive elements such as sliders, accordeons, gallery wich can provide pleasant experience while searching for your pair.',
+        description: 'works.projects.2.description',
         tags: [
             {
                 name: 'vanilla-js',
@@ -230,8 +227,7 @@ const projects = [
     },
     {
         name: 'X-OPEN',
-        description:
-            'Simple landing page with css-transitions, hovers and animations. It takes minimal script and many css. It was one of the first own projects.',
+        description: 'works.projects.3.description',
         tags: [
             {
                 name: 'vanilla-js',

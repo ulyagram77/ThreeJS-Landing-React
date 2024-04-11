@@ -51,14 +51,13 @@ const Navbar = () => {
                     <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
                     <p className="text-white text-[18px] font-bold cursor-pointer flex ">
                         {t('navbar.logo.name')} &nbsp;
-                        <span className="sm:block hidden">
-                            {' '}
+                        <span className="md:block hidden">
                             | {t('navbar.logo.profession')}
                         </span>
                     </p>
                 </Link>
 
-                <ul className="list-none hidden sm:flex flex-row gap-10">
+                <ul className="list-none hidden lg:flex flex-row gap-10">
                     {navLinks.map(nav => (
                         <li
                             key={nav.id}
@@ -74,7 +73,7 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                <div className="sm:hidden flex flex-1 justify-end items-center">
+                <div className="lg:hidden flex flex-1 justify-end items-center">
                     <img
                         src={toggle ? close : menu}
                         alt="menu"

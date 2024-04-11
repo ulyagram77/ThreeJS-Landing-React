@@ -102,7 +102,22 @@
 
     "works": {
         "title": "Projects.",
-        "subtitle": "showcase of my skills"
+        "subtitle": "showcase of my skills",
+        "text": "Below you can watch some of my works. Following projects showcase my skills and experience through real examples of my work.<br /><br />Each project contains <b>demo link</b>, <b>source-code link</b>, and <b>brief description</b> with the technical stack used in it.<br /><br />These projects reflect my ability to work with different situations and technologies, as well as my ability to organize the project beautifully for others to see.",
+        "projects": [
+            {
+                "description": "Web-Application that allows users to get information about the characters of the marvel universe and the comics in which they participated."
+            },
+            {
+                "description": "Simple CRUD Web-Application  for managing company employees salaries and to keep track of the total number of employees for fast workflow organization."
+            },
+            {
+                "description": "Amazing landing page with many intaractive elements such as sliders, accordeons, gallery wich can provide pleasant experience while searching for your pair."
+            },
+            {
+                "description": "Simple landing page with css-transitions, hovers and animations. It takes minimal script and many css. It was one of the first own projects."
+            }
+        ]
     },
 
     "contact": {
