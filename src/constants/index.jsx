@@ -160,6 +160,7 @@ const experiences = [
             'experience.timeline.elements.4.points.2',
             'experience.timeline.elements.4.points.3',
             'experience.timeline.elements.4.points.4',
+            'experience.timeline.elements.4.points.5',
         ],
         github: 'https://github.com/Skiftech-project',
     },
