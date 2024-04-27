@@ -31,6 +31,7 @@ import xopen from './projects/xopen.png';
 import pulse from './projects/pulse.png';
 
 import sniffCertificate from './certificates/sniff.pdf';
+import cv from './certificates/CV_Ulianov_Kyrylo_Front-end developer.pdf';
 
 import githubContacts from './social/github.svg';
 import telegramContacts from './social/telegram.svg';
@@ -68,6 +69,7 @@ export {
     khpi,
     sigma,
     sniffCertificate,
+    cv,
     skiftech,
     githubContacts,
     instagramContacts,
