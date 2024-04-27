@@ -23,6 +23,7 @@ import {
     telegramContacts,
     githubContacts,
     instagramContacts,
+    cv,
 } from '../assets';
 
 export const navLinks = [
@@ -37,6 +38,11 @@ export const navLinks = [
     {
         id: 'contact',
         title: 'navbar.links.contact',
+    },
+    {
+        id: 'cv',
+        title: 'navbar.links.cv',
+        href: cv,
     },
 ];
 
