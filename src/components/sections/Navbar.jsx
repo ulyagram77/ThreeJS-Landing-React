@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+import { useMathcMedia } from 'src/hooks';
 import { styles } from 'styles/styles';
 import { navLinks } from 'src/constants';
 import { logo, menu, close } from 'src/assets';
-import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { isDesktop } = useMathcMedia();
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
@@ -39,7 +42,7 @@ const Navbar = () => {
                 scrolled ? 'bg-primary' : 'bg-transparent'
             }`}
         >
-            <div className="w-full flex items-center max-w-7xl mx-auto">
+            <div className="w-full flex items-center max-w-7xl mx-auto gap-8">
                 <Link
                     to="/"
                     className="flex flex-1 items-center gap-2"
@@ -68,12 +71,29 @@ const Navbar = () => {
                             } hover:text-white text-[18px] font-medium cursor-pointer transition-color ease-in-out duration-300`}
                             onClick={() => setActive(nav.title)}
                         >
-                            <a href={`#${nav.id}`}>{t(nav.title)}</a>
+                            {nav.href ? (
+                                <a
+                                    href={`#${nav.id}`}
+                                    onClick={() => window.open(nav.href, '_blank')}
+                                >
+                                    {t(nav.title)}
+                                </a>
+                            ) : (
+                                <a href={`#${nav.id}`}>{t(nav.title)}</a>
+                            )}
                         </li>
                     ))}
                 </ul>
 
-                <div className="lg:hidden flex flex-1 justify-end items-center">
+                {!isDesktop && (
+                    <div className="ml-10 flex gap-2">
+                        <button onClick={() => changeLanguage('en')}>EN</button>
+                        <div>|</div>
+                        <button onClick={() => changeLanguage('ua')}>UA</button>
+                    </div>
+                )}
+
+                <div className="lg:hidden flex justify-end items-center">
                     <img
                         src={toggle ? close : menu}
                         alt="menu"
@@ -100,18 +120,31 @@ const Navbar = () => {
                                         setActive(nav.title);
                                     }}
                                 >
-                                    <a href={`#${nav.id}`}>{t(nav.title)}</a>
+                                    {nav.href ? (
+                                        <a
+                                            href={`#${nav.id}`}
+                                            onClick={() =>
+                                                window.open(nav.href, '_blank')
+                                            }
+                                        >
+                                            {t(nav.title)}
+                                        </a>
+                                    ) : (
+                                        <a href={`#${nav.id}`}>{t(nav.title)}</a>
+                                    )}
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
 
-                <div className="ml-10 flex">
-                    <button onClick={() => changeLanguage('en')}>EN</button>
-                    <div>|</div>
-                    <button onClick={() => changeLanguage('ua')}>UA</button>
-                </div>
+                {isDesktop && (
+                    <div className="ml-10 flex gap-2">
+                        <button onClick={() => changeLanguage('en')}>EN</button>
+                        <div>|</div>
+                        <button onClick={() => changeLanguage('ua')}>UA</button>
+                    </div>
+                )}
             </div>
         </nav>
     );
