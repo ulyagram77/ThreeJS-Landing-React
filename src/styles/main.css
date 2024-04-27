@@ -17,6 +17,7 @@
 #root {
     position: relative;
     height: 100vh;
+    background-color: #272727;
 }
 
 .hash-span {
