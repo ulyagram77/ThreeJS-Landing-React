@@ -54,7 +54,7 @@ const ExperienceCard = ({ experience }) => {
                 </ul>
                 {experience.github ? (
                     <p
-                        className="underline text-sm hover:text-blue-500 cursor-pointer transition-color ease-in-out duration-300"
+                        className="text-secondary underline text-sm hover:text-white cursor-pointer transition-color ease-in-out duration-300"
                         onClick={() => window.open(experience.github, '_blank')}
                     >
                         {t('experience.timeline.github')}
@@ -63,7 +63,7 @@ const ExperienceCard = ({ experience }) => {
 
                 {experience.certificate ? (
                     <p
-                        className="underline text-sm hover:text-blue-500 cursor-pointer transition-color ease-in-out duration-300"
+                        className="text-secondary underline text-sm hover:text-white cursor-pointer transition-color ease-in-out duration-300"
                         onClick={() => window.open(experience.certificate, '_blank')}
                     >
                         {t('experience.timeline.certificate')}
