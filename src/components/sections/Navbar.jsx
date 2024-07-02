@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
+import { motion } from 'framer-motion';
 import { useMathcMedia } from 'src/hooks';
 import { styles } from 'styles/styles';
 import { navLinks } from 'src/constants';
@@ -101,10 +101,13 @@ const Navbar = () => {
                         onClick={() => setToggle(!toggle)}
                     />
 
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: toggle ? 1 : 0, y: toggle ? 0 : -20 }}
+                        transition={{ duration: 0.3 }}
                         className={`${
                             !toggle ? 'hidden' : 'flex'
-                        } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+                        } p-6 violet-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
                     >
                         <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
                             {navLinks.map(nav => (
@@ -135,7 +138,7 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {isDesktop && (
