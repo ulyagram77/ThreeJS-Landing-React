@@ -1,5 +1,5 @@
 {
-    "name": "portfolio3d-landing-react",
+    "name": "ulyagram-portfolio",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -8,7 +8,7 @@
         "build": "vite build",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
-        "prepare": "husky install"
+        "prepare": "husky"
     },
     "dependencies": {
         "@emailjs/browser": "^4.1.0",
